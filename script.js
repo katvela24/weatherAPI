@@ -10,7 +10,53 @@ searchButton.click(function(){
     city.val("")
     renderHistory(cityValue,true)    
 
+    getCoord(cityValue)
 })
+
+function getCoord(city){
+    fetch ("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=21a340cdde7edefb7027c127cf3273cf")
+    .then(function(response){
+        return response.json()
+        console.log (response[0].name)
+    })
+    .then(function(data){
+        console.log("city data",data)
+        console.log(data[0].name)
+        fetch ("http://api.openweathermap.org/data/2.5/forecast?lat=" + data[0].lat + "&lon=" + data[0].lon + "&units=imperial&appid=21a340cdde7edefb7027c127cf3273cf")
+            .then(function(response){
+                return response.json()
+
+            })
+            .then(function(data){
+                console.log("city",data.city.name)
+                console.log("date",data.list[0].dt_txt)
+                console.log("icon",data.list[0].weather[0].icon)
+                console.log("temperature",data.list[0].main.temp)
+                console.log("windspeed",data.list[0].wind.speed)
+                console.log("humidity",data.list[0].main.humidity)
+                
+                currentData = {
+                    city:city,
+                    date:date,
+                    icon:icon,
+                    temperature:temperature,
+                    windspeed:windspeed,
+                    humidity:humidity,
+                }
+             
+            //    I need to call the function and pass the data
+            // functionName(data)
+            })
+            .catch(function(err){
+                console.log (err)
+            })
+
+    })
+    .catch(function(err){
+        console.log (err)
+    })
+}
+
 function renderHistory(cityValue,clicked){
     historyid.empty()
     if(clicked){
@@ -34,32 +80,7 @@ function renderHistory(cityValue,clicked){
 // globalvariables
 // document.querySelector target the values of HTML objects
 
-fetch ("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=21a340cdde7edefb7027c127cf3273cf")
-    .then(function(response){
-        return response.json()
-        console.log (response[0].name)
-    })
-    .then(function(data){
-        console.log("city data",data)
-        console.log(data[0].name)
-        fetch ("http://api.openweathermap.org/data/2.5/forecast?lat=" + data[0].lat + "&lon=" + data[0].lon + "&units=imperial&appid=21a340cdde7edefb7027c127cf3273cf")
-            .then(function(response){
-                return response.json()
 
-            })
-            .then(function(data){
-               console.log("I'm looking",data)
-            //    I need to call the function and pass the data
-            // functionName(data)
-            })
-            .catch(function(err){
-                console.log (err)
-            })
-
-    })
-    .catch(function(err){
-        console.log (err)
-    })
     // functionName(data)
     // google: how to target the DOM; how to get the DOMs value; how to append; for loops
     

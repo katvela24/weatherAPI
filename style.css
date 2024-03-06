@@ -1,9 +1,53 @@
 body {
     background-color: black;
-    color: white;
+    color: rgba(255, 255, 255, 0.837);
+
+}
+
+#city {
+    margin-top: 5px;
+    margin-bottom: 5px;
+   
 
 }
 
 .city {
-    display:block
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    
+
 }
+
+.header {
+    text-align: center;
+
+}
+
+#left {
+    /* width: 10%; */
+    background-color: lightblue;
+    
+
+}
+
+.button-id {
+   
+
+}
+
+.search-button {
+    margin-top: 5px;
+    width: 100%;
+    color:black;
+    
+}
+
+#right {
+    height: 600px;
+    color: dimgray;
+    background-color: gainsboro ;
+  
+
+}
+

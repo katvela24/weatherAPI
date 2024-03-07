@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" href= "assets/CSS/style.css"></link>
-    <title>Weather Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  </link>
+  <link rel="stylesheet" href="assets/CSS/style.css">
+  </link>
+  <title>Weather Dashboard</title>
 </head>
+
 <body class="container">
-    <header>
-      <div class="header">
-        <h1>
-          Weather Dashboard
+  <header>
+    <div class="header">
+      <h1>
+        Weather Dashboard
 
-        </h1>
+      </h1>
+
+    </div>
+
+  </header>
+  <main class="row">
+    <div id="left" class="col-lg-2 col-sm-12">
+      <div class="search-box">
+        <label for="city">
+          Search for a City
+        </label>
+        <br>
+        <input type="text" id="city" name="city" placeholder="San Diego">
+        <br>
+        <button id="search-button" class="search-button">
+          Search
+
+        </button>
+
+      </div>
+      <hr>
+      <div id="history">
+        <button class="search-button">
+          Sacramento
+        </button>
 
       </div>
 
-    </header>
-    <main class="row">
-      <div id="left" class="col-lg-2 col-sm-12">
-        <div class="search-box">
-          <label for="city">
-            Search for a City
-          </label>
-          <br>
-          <input type="text" id="city" name="city" placeholder="San Diego">
-          <br>
-          <button id="search-button" class="search-button">
-            Search
+    </div>
+    <div id="right" class="col-lg-10 col-sm-12">
+      
 
-          </button>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
-        </div>
-        <hr>
-        <div id="history">
-          <button class="search-button">
-            Sacramento
-          </button>
-
-        </div>
-
-      </div>
-      <div id="right" class="col-lg-10 col-sm-12">
-        5-day Forecast 
-
-      </div>
-    </main>
-    <script
-  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-  crossorigin="anonymous"></script>
-    <script src="assets/JS/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/JS/script.js"></script>
 </body>
 
 </html>

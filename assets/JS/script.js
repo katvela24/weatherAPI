@@ -42,7 +42,7 @@ function getCoord(city) {
         .then(function (data) {
             // console.log("city data",data)
             // console.log(data[0].name)
-            fetch("http://api.openweathermap.org/data/2.5/forecast?lat=" + data[0].lat + "&lon=" + data[0].lon + "&units=imperial&appid=21a340cdde7edefb7027c127cf3273cf")
+            fetch("https://api.openweathermap.org/data/2.5/forecast?lat=" + data[0].lat + "&lon=" + data[0].lon + "&units=imperial&appid=21a340cdde7edefb7027c127cf3273cf")
                 .then(function (response) {
                     return response.json()
 

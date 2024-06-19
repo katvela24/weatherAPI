@@ -1,7 +1,12 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+
 body {
 
-    background-color:black;
-    color: rgb(255, 255, 255);
+    background-color: white;
+    color: black;
 
 }
 
@@ -13,7 +18,7 @@ label {
 #city {
     margin-top: 5px;
     margin-bottom: 5px;
-   
+
 
 }
 
@@ -21,7 +26,7 @@ label {
     display: block;
     width: 100%;
     margin-bottom: 5px;
-    
+
 
 }
 
@@ -34,7 +39,7 @@ label {
     /* width: 10%; */
     background-color: lightblue;
     font-family: Arial, Helvetica, sans-serif;
-    
+
 
 }
 
@@ -43,15 +48,34 @@ label {
 .search-button {
     margin-top: 5px;
     width: 100%;
-    color:black;
-    
+    color: black;
+
 }
 
 #right {
     height: 600px;
     color: black;
-    background-color: dimgray;
     font-family: Arial, Helvetica, sans-serif;
-  
+
 }
 
+.today {
+
+    background-color: dimgray;
+
+}
+
+.weathercard {
+    margin: 1%;
+    margin-top: 5%;
+    background-color: lightskyblue;
+    display: inline-block;
+
+}
+
+/*Media query for all devices */
+
+@media screen,
+print {
+    /* … */
+}
